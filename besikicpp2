@@ -1,0 +1,107 @@
+//xmovani tanxmovani
+#include <iostream>
+using namespace std;
+int getUpperCaseCount(strinf word){
+int letterCount=0;
+int n=word.lenght();
+char charArray[n+1];
+strcpy (charArray,word.c_str());
+for (int i=0; i<n; i++){
+if (charArray[i]>97){
+letterCount++;
+}
+}
+return letterCount;
+};
+int main()
+{
+int x=getUpperCaseCount("uniVERsiteti");
+cout <<x<<endl;
+return 0;
+}
+
+//funqciis gadatvirtva albat
+#include <iostream>
+using namespace std;
+int GetSum(int x,int y)
+{
+return x+y;
+}
+int main()
+{
+int x=getSum(10.5,20.6);
+double y=GetSum(10.5,20.6)
+cout<<x<<endl;
+cout<<y<<endl;
+return 0;
+}
+//operatoris gadatvirtva
+#include <iostream>
+using namespace std;
+class Wiladi
+{
+private:
+int mricxveli;
+int mnishvneli;
+public:
+Wiladi (int mricxveli,int mnishvneli)
+{
+this->mricxveli=mricxveli;
+this->mnishvneli=mnishvneli;
+}
+Wiladi operato+(Wiladi x)
+{
+int s=this->mnishvneli * x.mnishvneli;
+int s1=(s/this->mnishvneli)*this->mricxveli;
+int s2=(s/x.mnishvneli)*x.mricxveli;
+Wiladi resp(s1+s2,s);
+return resp;
+}
+void Print()
+{
+cout<<this->mricxveli<<"|"<<this->mnishvneli<<endl;
+}
+};
+int main()
+{
+Wiladi s1(2,5);
+Wiladi s2(2,4);
+Wiladi s3=s1+s2;
+s3.Print();
+return 0;
+}
+
+//memkvidreoba
+#include <iostream>
+using namespace std;
+class Animal
+{
+public:
+void eat()
+{
+cout<<"i can eat."<<endl;
+}
+void sleep()
+{
+cout<<"i cant sleep."<<endl;
+}
+};
+class Dog: public Animal
+{
+public:
+void bark()
+{
+cout<<"I can bark."<<endl;
+}
+};
+class Cat:public Animal
+{
+};
+int main ()
+{
+Dog d;
+d.eat();
+d.sleep();
+d.bark();
+return 0;
+}
